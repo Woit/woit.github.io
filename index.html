@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{%- assign months = "января,февраля,марта,апреля,мая,июня,июля,августа,сентября,октября,ноября,декабря" | split: "," -%}
+<ul class="posts">
+{%- for post in site.posts %}
+  {%- assign m = post.date | date: "%-m" | minus: 1 %}
+  <li>
+    <span class="date">{{ post.date | date: "%-d" }} {{ months[m] }} {{ post.date | date: "%Y" }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+{%- else %}
+  <li class="empty">Скоро здесь будут статьи.</li>
+{%- endfor %}
+</ul>
