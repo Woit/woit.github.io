@@ -44,7 +44,7 @@ body {
   font-size: 18px;
   line-height: 1.7;
 }
-.wrap { max-width: 740px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 16px; }
 
 /* ── Шапка ───────────────────────────────────────────── */
 header.site {
